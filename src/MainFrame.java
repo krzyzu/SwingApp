@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class MainFrame extends JFrame {
-    // 1:52
+    // 2:20
     private Toolbar toolbar;
     private TextPanel textPanel;
     private FormPanel formPanel;
@@ -24,7 +24,8 @@ public class MainFrame extends JFrame {
                                       public void formEventOccured(FormEvent e) {
                                           String name = e.getName();
                                           String occupation = e.getOccupation();
-                                          textPanel.appendText(name + ": " + occupation + ".\n");
+                                          String ageCategory = e.getAgeCategory();
+                                          textPanel.appendText(name + " works as " + occupation + " and his age is " + ageCategory + ".\n");
                                       }
                                   });
 
